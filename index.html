@@ -13,8 +13,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
       integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="tailwind/main.css">
+  <style>
+    .slick-slide h3 {
+      background: #3498db;
+      color: #fff;
+      font-size: 24px;
+      line-height: 100px;
+      text-align: center;
+      margin: 0 10px;
+      border-radius: 8px;
+    }
+    .deemoo {
+       top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+    }
+  </style>
 </head>
 <body class="bg-gray-50 font-poppins">
   <main>
@@ -171,13 +190,28 @@
         </div>
       </div>
     </header>
-    
+    <!--!start-->
+    <div class="autoplay relative">
+      <div>
+        <img class="w-[100%] h-[100vh] object-cover" src="./assets/image/slide-images/slideimg1.jpg" alt="">
+      </div>
+      <div>
+        <div>
+          <img class="w-[100%] h-[100vh] object-cover" src="./assets/image/slide-images/slideimg2.jpg" alt="">
+        </div>
+      </div>
+      <div>
+        <div>
+          <img class="w-[100%] h-[100vh] object-cover" src="./assets/image/slide-images/slideimg3.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <!--!end-->
     <!-- Hero Section -->
     <!-- Search Section -->
-    <section class="py-16 sm:py-32 lg:py-64 bg-cover bg-center"
-      style="background-image: url('assets/image/008-1170x7850.jpg')">
+    <section class=" w-[100%] py-16 sm:py-32 lg:py-64 bg-cover bg-center absolute top-[1%] deemoo  ">
       <div class="container max-w-7xl mx-auto text-center px-4">
-        <h1 class="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-6">
+        <h1 class="text-xl sm:text-3xl md:text-3xl font-semibold text-white mb-6">
           আপনার প্রয়োজনীয় পণ্য বা সেবা খুঁজুন
         </h1>
 
@@ -661,7 +695,22 @@
       </div>
     </footer>
   </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="assets/js/market.js"></script>
   <script src="assets/js/custome.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.autoplay').slick({
+      slidesToShow: 1, // Only one slide visible at a time
+      slidesToScroll: 1, // Scroll one slide at a time
+      autoplay: true, // Enable autoplay
+      autoplaySpeed: 2000, // 2 seconds between slides
+      fade: true, // Enable fade effect
+      arrows: true, // Enable navigation arrows
+      dots: false // Enable dots for navigation
+    });
+  });
+</script>
 </body>
 </html>
