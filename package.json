@@ -2,9 +2,11 @@
   "name": "bdvaratiya",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "vite"
-  },
+ "scripts": {
+  "test": "vite",
+  "build": "vite build"
+  }
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
