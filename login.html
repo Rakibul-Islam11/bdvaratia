@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login & Register | Your Website</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Potro+Sans+Bangla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome CDN for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
+  integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- External Stylesheet -->
+    <!-- Tailwind CSS -->
+
+    <style>
+      .form-input {
+  background-color: white; /* Input field background color set to white */
+}
+  .btn_primary {
+    background-color: yellow !important;
+    color: black !important;
+  }
+    </style>
+  
+    <link rel="stylesheet" crossorigin href="/assets/style-CRy3IUYz.css">
+    <link rel="stylesheet" crossorigin href="/assets/main-D57xhWs0.css">
+  </head>
+
+  <body class="font-poppins">
+      <!-- Main Content -->
+      <main>
+    <!-- Header Section -->
+    <header class="text-white p-4 sticky top-0 bg-gray-800 ">
+      <!-- responsive menu start -->
+      <div class="flex md:hidden flex-row justify-between bg-gray-800 items-center">
+        <!-- phone menus start -->
+        <div>
+          <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+          <div class="drawer-content">
+            <!-- Hamburger Button -->
+            <label for="my-drawer" class="btn btn-primary drawer-button">
+              <span><i class="fa-solid fa-bars"></i></span>
+            </label>
+          </div>
+    
+          <div class="drawer-side">
+            <!-- Sidebar Overlay -->
+            <label for="my-drawer" class="drawer-overlay"></label>
+            <!-- Sidebar Content -->
+            <ul class="menu bg-base-200 text-base-content h-[95vh] w-80 p-4 flex flex-col relative">
+              <!-- Logo -->
+              <div>
+                <a href="index.html">
+                  <img src="/assets/Logo1-DkI-_gk-.jpg" alt="Logo" class="h-14 mr-4" />
+                </a>
+              </div>
+    
+              <!-- Close Button -->
+              <label for="my-drawer" class="absolute top-2 right-2 text-4xl text-gray-600 cursor-pointer">
+                &times;
+              </label>
+    
+              <!-- Sidebar Items -->
+    
+              <a href="add_post.html" class="btn btn-primary bg-yellow-400 text-white">Add Post</a>
+              <a href="add_post.html" class="btn mt-2 btn-primary bg-slate-800 text-white">Blog</a>
+              <a href="add_post.html" class="btn mt-2 btn-primary bg-slate-800 text-white">Blog</a>
+    
+              <!-- Bottom Section -->
+              <div class="mt-auto">
+                <h1 class="mb-2">Select Language</h1>
+                <li>
+                  <button id="languageButton" class="btn border-2 border-gray-600 rounded-md">
+                    English
+                  </button>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <!-- phone menus end -->
+    
+        <!-- login and res button start -->
+        <div>
+          <a href="login.html" class="text-white px-4 py-2 flex items-center hover:text-yellow-300">
+            <i class="fa fa-right-to-bracket"></i>
+            Login | Registration
+          </a>
+        </div>
+        <!-- login and res button end -->
+      </div>
+      <!-- responsive menu end -->
+    
+    
+    
+      <div class="relative w-full h-full bg-cover bg-center max-w-screen-xl mx-auto hidden md:block">
+        <div class="flex flex-wrap justify-between items-center">
+          <!-- Left side: Logo & Menu -->
+          <div class="flex items-center justify-start w-full sm:w-auto">
+            <a href="index.html">
+              <img src="/assets/Logo1-DkI-_gk-.jpg" alt="Logo" class="h-14 mr-4" />
+            </a>
+            <nav class="w-full sm:w-auto mt-4 sm:mt-0 lg:ml-5">
+              <ul class="flex flex-wrap justify-center sm:justify-start space-x-4">
+                <li>
+                  <button id="languageButton" class="btn border-2 border-gray-600 rounded-md">
+                    English
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+    
+          <!-- Centered Right side: Login, Post & Search -->
+          <div class="flex items-center space-x-4 w-full sm:w-auto mt-4 sm:mt-0">
+            <!-- Search Button -->
+            <button id="searchModalButton" class="bg-transparent text-white px-4 py-2 hover:text-yellow-300">
+              <i class="fas fa-search"></i> Search
+            </button>
+    
+            <!-- Modal -->
+            <div id="searchModal"
+              class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
+              <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 w-11/12 sm:w-auto">
+                <!-- Modal Header -->
+                <div class="flex justify-between items-center mb-2">
+                  <h2 class="text-xl font-bold">Search</h2>
+                  <button id="closeModalButton" class="text-gray-500 text-2xl">
+                    &times;
+                  </button>
+                </div>
+                <!-- Modal Content -->
+                <hr class="mb-2" />
+                <form class="form-wrapper">
+                  <!-- Category -->
+                  <label for="category" class="form-label">Category:</label>
+                  <select id="category" class="form-select">
+                    <option value="">Select Category</option>
+                    <option value="family">Family</option>
+                    <option value="bachelor">Bachelor</option>
+                    <option value="office">Office</option>
+                  </select>
+    
+                  <!-- District -->
+                  <label for="district" class="form-label">District:</label>
+                  <select id="district" class="form-select">
+                    <option value="">Select District</option>
+                    <option value="dhaka">Dhaka</option>
+                    <option value="chattogram">Chattogram</option>
+                    <option value="rajshahi">Rajshahi</option>
+                  </select>
+    
+                  <!-- Sub-district (Thana) -->
+                  <label for="subdistrict" class="form-label">Sub-district (Thana):</label>
+                  <select id="subdistrict" class="form-select">
+                    <option value="">Select Sub-district</option>
+                    <option value="gulshan">Gulshan</option>
+                    <option value="mirpur">Mirpur</option>
+                    <option value="uttara">Uttara</option>
+                  </select>
+    
+                  <!-- Price Range -->
+                  <label for="priceRange" class="form-label">Price Range:</label>
+                  <div class="form-price-range">
+                    <input type="number" id="minPrice" placeholder="Min Price" class="form-input" />
+                    <input type="number" id="maxPrice" placeholder="Max Price" class="form-input" />
+                  </div>
+                  <button class="form-button">Search</button>
+                </form>
+              </div>
+            </div>
+    
+            <!-- Login Button -->
+            <a href="login.html" class="text-white px-4 py-2 flex items-center hover:text-yellow-300">
+              <i class="fa fa-right-to-bracket"></i>
+              Login | Registration
+            </a>
+    
+            <!-- Post Button -->
+            <a href="add_post.html" class="btn btn_primary">Add Post</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+ 
+      <!-- Hero Section -->
+      <section class="py-6 bg-gradient-to-r from-white-100 to-pink-300 ">
+        <div class="max-w-screen-xl mx-auto px-2">
+          <nav
+            class="flex items-center space-x-1 text-sm text-gray-800 font-semibold pb-1"
+          >
+            <a
+              href="index.html"
+              class="hover:text-yellow-500 transition-colors duration-300 text-gray-700"
+              >Home</a
+            >
+            <span class="text-gray-500">/</span>
+            <a href="javsricpt:voied()" class="text-yellow-500"
+              >Login & Register</a
+            >
+          </nav>
+
+          <hr class="border-t-1 border-yellow-600 opacity-50" />
+        </div>
+      </section>
+
+      <!-- Login & Register Section -->
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-screen-md mx-auto px-4">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <!-- Tabs for Login and Register -->
+
+            <!-- Login Form -->
+            <div
+              id="login-form"
+              class="transition-all duration-500 ease-in-out"
+            >
+              <h3 class="text-2xl font-semibold text-gray-800 mb-6">
+                Login to Your Account
+              </h3>
+              <form action="#" method="POST">
+                <div class="mb-4">
+                  <label for="login-email" class="form-label"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="login-email"
+                    name="email"
+                    class="form-input"
+                    required
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label for="login-password" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    id="login-password"
+                    name="password"
+                    class="form-input"
+                    required
+                  />
+                </div>
+
+                <!-- Forgot Password Link -->
+                <div class="text-sm text-right mb-4">
+                  <a
+                    href="javascript:void(0)"
+                    class="text-yellow-500"
+                    onclick="openModal()"
+                    >Forgot Password?</a
+                  >
+                </div>
+
+                <!-- Forgot Password Modal -->
+                <div
+                  id="forgot-password-modal"
+                  class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+                >
+                  <div class="bg-white p-8 rounded-md shadow-lg w-96">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                      Forgot Password
+                    </h3>
+                    <form action="#" method="POST">
+                      <div>
+                        <label for="email" class="form-label">Your email</label>
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          class="form-input"
+                          placeholder="name@company.com"
+                          required=""
+                        />
+                      </div>
+                      <button type="submit" class="form-button mt-3">
+                        Reset Password
+                      </button>
+                    </form>
+                    <div class="mt-4 text-right">
+                      <button
+                        onclick="closeModal()"
+                        class="text-sm btn bg-gray-800 text-white"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- External JavaScript File -->
+                <script src="assets/js/forgot-password.js"></script>
+
+                <button type="submit" class="btn btn_primary w-full rounded-md">
+                  Login
+                </button>
+
+                <!-- Social Login Buttons -->
+                <div class="my-6">
+                  <!-- Divider -->
+                  <div class="flex items-center my-6">
+                    <hr class="flex-grow border-t border-gray-300" />
+                    <p class="mx-4 text-gray-600 font-medium">Or</p>
+                    <hr class="flex-grow border-t border-gray-300" />
+                  </div>
+                  <div class="flex justify-center space-x-4">
+                    <!-- Facebook Login Button -->
+                    <button
+                      class="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                      onclick="loginWithFacebook()"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                      <span>Facebook</span>
+                    </button>
+
+                    <!-- Google Login Button -->
+                    <button
+                      class="flex items-center space-x-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-300"
+                      onclick="loginWithGoogle()"
+                    >
+                      <i class="fab fa-google"></i>
+                      <span>Google</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <div class="mt-6 text-center">
+                <p class="text-sm text-gray-600">
+                  Don't have an account?
+                  <a
+                    href="javascript:void(0)"
+                    class="text-yellow-500"
+                    onclick="showForm('register')"
+                    >Register here</a
+                  >.
+                </p>
+              </div>
+            </div>
+
+            <!-- Register Form -->
+            <div
+              id="register-form"
+              class="hidden transition-all duration-500 ease-in-out"
+            >
+              <h3 class="text-2xl font-semibold text-gray-800 mb-6">
+                Create a New Account
+              </h3>
+              <form action="#" method="POST" class="space-y-4 form-wrapper">
+                <!-- First Name -->
+                <div class="flex space-x-4">
+                  <!-- First Name -->
+                  <div class="flex-1">
+                    <label for="first-name" class="form-label">
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      name="first-name"
+                      id="first-name"
+                      class="form-input w-full"
+                      placeholder="John"
+                      required
+                    />
+                  </div>
+
+                  <!-- Last Name -->
+                  <div class="flex-1">
+                    <label for="last-name" class="form-label">
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      name="last-name"
+                      id="last-name"
+                      class="form-input w-full"
+                      placeholder="Doe"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <label for="email" class="form-label">Your Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-input"
+                    placeholder="name@company.com"
+                    required
+                  />
+                </div>
+
+                <!-- Password -->
+                <div class="relative">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="••••••••"
+                    class="form-input"
+                    required
+                  />
+                  <button
+                    type="button"
+                    onclick="togglePasswordVisibility('password', this)"
+                    class="absolute right-2 top-9 text-gray-500 hover:text-gray-700"
+                  >
+                    👁
+                  </button>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="relative">
+                  <label
+                    for="confirm-password"
+                    class="block mb-2 text-sm font-medium text-gray-900"
+                    >Confirm Password</label
+                  >
+                  <input
+                    type="password"
+                    name="confirm-password"
+                    id="confirm-password"
+                    placeholder="••••••••"
+                    class="form-input"
+                    required
+                  />
+                  <button
+                    type="button"
+                    onclick="togglePasswordVisibility('confirm-password', this)"
+                    class="absolute right-2 top-9 text-gray-500 hover:text-gray-700"
+                  >
+                    👁
+                  </button>
+                </div>
+
+                <div class="flex space-x-4">
+                  <!-- First Name -->
+                  <div class="flex-1">
+                    <label for="first-name" class="form-label"> Address </label>
+                    <input
+                      type="text"
+                      name="first-name"
+                      id="first-name"
+                      class="form-input w-full"
+                      placeholder="Address"
+                      required
+                    />
+                  </div>
+
+                  <!-- Last Name -->
+                  <div class="flex-1">
+                    <label for="last-name" class="form-label"> Zip Code </label>
+                    <input
+                      type="text"
+                      name="last-name"
+                      id="last-name"
+                      class="form-input w-full"
+                      placeholder="Zip"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Terms & Conditions -->
+                <div class="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    name="terms"
+                    class="text-yellow-500 focus:ring-yellow-500 focus:ring-2 rounded-sm"
+                    required
+                  />
+                  <label for="terms" class="text-sm text-gray-600 ml-2">
+                    I agree to the
+                    <a href="#" class="text-yellow-500 hover:underline"
+                      >Privacy Policy</a
+                    >
+                  </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full btn btn_primary">
+                  Register
+                </button>
+              </form>
+
+              <div class="mt-6 text-center">
+                <p class="text-sm text-gray-600">
+                  Already have an account?
+                  <a
+                  style="background-color: yellow !important;"
+                    href="javascript:void(0)"
+                    class="text-yellow-500"
+                    onclick="showForm('login')"
+                    >Login here</a
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer bg-gray-800">
+        <div class="container">
+          <div class="footer-grid">
+            <!-- Column 1: About Us -->
+            <div>
+              <h3>About Us</h3>
+              <p>
+                We are a leading company offering the best products and
+                services. Our aim is to provide high-quality solutions to our
+                customers.
+              </p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Contact Us -->
+            <div>
+              <h3>Contact Us</h3>
+              <p>123 Street Name, City, Country</p>
+              <p>Phone: +123 456 7890</p>
+              <p>Email: contact@example.com</p>
+            </div>
+          </div>
+
+          <!-- Footer Bottom -->
+          <div class="footer-bottom">
+            <p>© 2025 Company Name. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/loginpage.js"></script>
+    <script src="assets/js/custome.js"></script>
+  </body>
+</html>
