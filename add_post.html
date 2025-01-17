@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Your Website</title>
+
+    <!-- Google Font (Poppins) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Potro+Sans+Bangla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <!-- FontAwesome CDN for Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- External Stylesheet -->
+
+    <link rel="stylesheet" href="assets/css/form.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="font-poppins">
+    <!-- Header Section -->
+    <header class="text-white p-4 sticky top-0 bg-gray-800">
+      <div
+        class="relative w-full h-full bg-cover bg-center max-w-screen-xl mx-auto"
+      >
+        <div class="flex flex-wrap justify-between items-center">
+          <!-- Left side: Logo & Menu -->
+          <div class="flex items-center justify-start w-full sm:w-auto">
+            <a href="index.html">
+              <img src="assets/image/Logo1.jpg" alt="Logo" class="h-8 mr-4" />
+            </a>
+            <nav class="w-full sm:w-auto mt-4 sm:mt-0 lg:ml-5">
+              <ul
+                class="flex flex-wrap justify-center sm:justify-start space-x-4"
+              >
+                <li>
+                  <button
+                    id="languageButton"
+                    class="btn border-2 border-gray-600 rounded-md"
+                  >
+                    English
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Centered Right side: Login, Post & Search -->
+          <div
+            class="flex items-center space-x-4 w-full sm:w-auto mt-4 sm:mt-0"
+          >
+            <!-- Login Button -->
+            <a
+              href="login.html"
+              class="text-white px-4 py-2 flex items-center hover:text-yellow-300"
+            >
+              <i class="fas fa-right-to-bracket"></i>
+              Login | Registration
+            </a>
+
+            <!-- Post Button -->
+            <a href="add_post.html" class="btn btn_primary">Add Post</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--END Hero Section -->
+
+    <section class="bg-gray-100 py-8">
+      <div class="max-w-4xl mx-auto bg-white p-6 rounded-md shadow-md">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Add New Post</h2>
+        <form class="form-wrapper gap-0">
+          <div class="tittle">
+            <label for="tittle" class="form-label">Post Tittle</label>
+            <input
+              type="text"
+              class="form-input"
+              placeholder="This is tittle"
+            />
+          </div>
+          <div class="category-subcategory flex items-center space-x-4 my-3">
+            <!-- Category -->
+            <div class="category w-1/2">
+              <label for="category" class="form-label">Category:</label>
+              <select id="category" class="form-select">
+                <option value="">Select Category</option>
+                <option value="family">Family</option>
+                <option value="bachelor">Bachelor</option>
+                <option value="office">Office</option>
+              </select>
+            </div>
+
+            <!-- Subcategory -->
+            <div class="subcategory w-1/2">
+              <label for="subcategory" class="form-label">Subcategory:</label>
+              <select id="subcategory" class="form-select">
+                <option value="">Select Subcategory</option>
+                <option value="family">Family</option>
+                <option value="bachelor">Bachelor</option>
+                <option value="office">Office</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="flex items-center space-x-4 my-3">
+            <!-- Price Range -->
+            <div class="price-range w-1/2">
+              <label for="priceRange" class="form-label">Price Range:</label>
+              <input
+                type="number"
+                id="Price"
+                placeholder="Price"
+                class="form-input"
+              />
+            </div>
+            <!-- Mobile Number -->
+            <div class="mobile-number w-1/2">
+              <label for="mobile" class="form-label">Mobile Number</label>
+              <input
+                type="tel"
+                id="mobile"
+                class="form-input"
+                placeholder="আপনার মোবাইল নম্বর লিখুন"
+                pattern="[0-9]{11}"
+                maxlength="11"
+              />
+            </div>
+          </div>
+
+          <div class="district-subdistrict flex items-center space-x-4 my-3">
+            <!-- District -->
+            <div class="district w-1/2">
+              <label for="district" class="form-label">District:</label>
+              <select id="district" class="form-select">
+                <option value="">Select District</option>
+                <option value="dhaka">Dhaka</option>
+                <option value="chattogram">Chattogram</option>
+                <option value="rajshahi">Rajshahi</option>
+              </select>
+            </div>
+
+            <!-- Sub-district (Thana) -->
+            <div class="subdistrict w-1/2">
+              <label for="subdistrict" class="form-label"
+                >Sub-district (Thana):</label
+              >
+              <select id="subdistrict" class="form-select">
+                <option value="">Select Sub-district</option>
+                <option value="gulshan">Gulshan</option>
+                <option value="mirpur">Mirpur</option>
+                <option value="uttara">Uttara</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="price-type flex items-center space-x-4 mt-2">
+            <label class="form-label">দাম নির্বাচন করুন :</label>
+
+            <!-- Fixed -->
+            <label class="flex items-center">
+              <input
+                type="radio"
+                name="price_type"
+                value="fixed"
+                class="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-600"
+              />
+              <span class="ml-2 text-gray-700">ফিক্সড</span>
+            </label>
+
+            <!-- Negotiable -->
+            <label class="flex items-center">
+              <input
+                type="radio"
+                name="price_type"
+                value="negotiable"
+                class="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-600"
+              />
+              <span class="ml-2 text-gray-700">আলোচনাযোগ্য</span>
+            </label>
+          </div>
+
+          <div class="file-upload my-5">
+            <label for="media" class="form-label">Upload Photo or Video:</label>
+            <div
+              class="upload-box border-2 border-dashed border-gray-300 rounded-lg p-5 hover:border-yellow-400 transition duration-300"
+              id="uploadBox"
+            >
+              <label
+                for="media"
+                class="bg-yellow-500 text-white px-4 py-2 rounded cursor-pointer hover:bg-yellow-600 transition duration-300"
+              >
+                Browse Files
+              </label>
+              <label for="" class="form-label pl-5"
+                >Drag & Drop your files here or</label
+              >
+              <input
+                type="file"
+                id="media"
+                class="hidden"
+                accept="image/*,video/*"
+                multiple
+              />
+            </div>
+            <small class="text-gray-500"
+              >Supported formats: JPG, PNG, MP4, AVI</small
+            >
+          </div>
+
+          <div class="textariya my-3">
+            <label for="" class="form-label">Post distriction</label>
+            <textarea
+              name="description"
+              id="description"
+              placeholder="অনুগ্রহ করে আপনার বিবরণ লিখুন...!"
+              class="p-4 form-input focus:ring-yellow-100"
+            ></textarea>
+          </div>
+
+          <button class="btn btn_primary">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer class="bg-gray-800 text-white pt-16 pb-5">
+      <div class="max-w-screen-xl mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <!-- Column 1: About Us -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">About Us</h3>
+            <p class="text-gray-400">
+              We are a leading company offering the best products and services.
+              Our aim is to provide high-quality solutions to our customers.
+            </p>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Services</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact Us -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+            <p class="text-gray-400">123 Street Name, City, Country</p>
+            <p class="text-gray-400">Phone: +123 456 7890</p>
+            <p class="text-gray-400">Email: contact@example.com</p>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="mt-4 border-t border-gray-700 pt-5 text-center">
+          <p class="text-gray-400 text-sm">
+            © 2025 Company Name. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/custome.js"></script>
+  </body>
+</html>

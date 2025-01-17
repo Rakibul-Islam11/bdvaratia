@@ -1,0 +1,56 @@
+/* Form Wrapper */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Label Styling */
+.form-label {
+  font-weight: 600;
+  color: #4a5568; /* Gray-700 */
+  margin-bottom: 0.5rem;
+}
+
+/* Select and Input Fields */
+.form-select,
+.form-input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d2d6dc; /* Gray-300 */
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+}
+
+.form-select:focus,
+.form-input:focus {
+  outline: none;
+  border-color: #fbbf24; /* Yellow-500 */
+  box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.25); /* Yellow-100 */
+}
+
+/* Flexbox for Price Range */
+.form-price-range {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-price-range .form-input {
+  flex: 1;
+}
+
+/* Button Styling */
+.form-button {
+  background-color: #fbbf24; /* Yellow-500 */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-align: center;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.form-button:hover {
+  background-color: #e5a80c; /* Yellow-600 */
+}

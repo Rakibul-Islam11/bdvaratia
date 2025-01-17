@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Your Website</title>
+
+    <!-- Google Font (Poppins) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Potro+Sans+Bangla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <!-- FontAwesome CDN for Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="assets/css/defold.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="font-poppins">
+    <!-- Header Section -->
+    <header class="text-white p-4 sticky top-0 bg-gray-800">
+      <div
+        class="relative w-full h-full bg-cover bg-center max-w-screen-xl mx-auto"
+      >
+        <div class="flex flex-wrap justify-between items-center">
+          <!-- Left side: Logo & Menu -->
+          <div class="flex items-center justify-start w-full sm:w-auto">
+            <a href="index.html">
+              <img src="assets/image/Logo1.jpg" alt="Logo" class="h-8 mr-4" />
+            </a>
+            <nav class="w-full sm:w-auto mt-4 sm:mt-0 ml-5">
+              <ul
+                class="flex flex-wrap justify-center sm:justify-start space-x-4"
+              >
+                <li>
+                  <button
+                    id="languageButton"
+                    class="btn border-2 border-gray-600 rounded-md"
+                  >
+                    English
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Centered Right side: Login, Post & Search -->
+          <div
+            class="flex items-center space-x-4 w-full sm:w-auto mt-4 sm:mt-0"
+          >
+            <!-- Login Button -->
+            <a
+              href="inbox.html"
+              class="text-white px-4 py-2 flex items-center hover:text-yellow-300"
+            >
+              <i class="fas fa-right-to-bracket"></i>
+              Inbox
+            </a>
+
+            <!-- Post Button -->
+            <a href="add_post.html" class="btn btn_primary">Add Post</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container mx-auto max-w-7xl py-6">
+      <div class="grid grid-cols-12 gap-8">
+        <!-- Sidebar -->
+        <div
+          class="col-span-12 md:col-span-3 bg-white shadow-lg rounded-xl p-8"
+        >
+          <div class="text-center">
+            <!-- Modal Header -->
+            <div
+              class="flex justify-between items-center p-4 border-b dark:border-gray-600"
+            >
+              <div class="flex text-left gap-4 items-start">
+                <!-- ইমেজ -->
+                <img
+                  src="assets/image/pro.jpg"
+                  alt="Seller Profile"
+                  class="w-16 h-16 rounded-full"
+                />
+
+                <!-- কনটেন্ট -->
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-800">John Doe</h3>
+                  <p class="text-sm text-green-500">Online</p>
+                  <!-- স্টোর -->
+                  <a href="#" class="if_stor"> Visit Store </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <nav class="mt-8">
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-3 text-gray-700 hover:bg-gray-100 rounded-lg text-xl"
+                >
+                  <span class="mr-4">
+                    <i class="fas fa-tachometer-alt"></i>
+                  </span>
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a
+                  href="inbox.html"
+                  class="flex items-center p-3 text-gray-700 hover:bg-gray-100 rounded-lg text-xl"
+                >
+                  <span class="mr-4">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  Messages
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center px-6 py-4 text-gray-700 hover:bg-gray-100 rounded-lg text-xl"
+                >
+                  <span class="mr-4">
+                    <i class="fas fa-user-edit"></i>
+                  </span>
+                  Edit Profile
+                </a>
+              </li>
+              <li>
+                <div>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-6 py-4 text-gray-700 hover:bg-gray-100 rounded-lg text-xl"
+                  >
+                    <span class="flex items-center">
+                      <i class="fas fa-list mr-4"></i> Listings
+                    </span>
+                    <i class="fas fa-chevron-down"></i>
+                  </a>
+                  <ul class="pl-10 mt-2 space-y-2">
+                    <li>
+                      <a
+                        href="#"
+                        class="block text-gray-600 hover:text-gray-800"
+                        >Add Listing</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block text-gray-600 hover:text-gray-800"
+                        >Bookmark</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center px-6 py-4 text-gray-700 hover:bg-gray-100 rounded-lg text-xl"
+                >
+                  <span class="mr-4">
+                    <i class="fas fa-cogs"></i>
+                  </span>
+                  Settings
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center px-6 py-4 text-gray-700 hover:bg-gray-100 rounded-lg text-xl"
+                >
+                  <span class="mr-4">
+                    <i class="fas fa-sign-out-alt"></i>
+                  </span>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div
+          class="col-span-12 md:col-span-9 bg-white shadow-xl rounded-xl p-8"
+        >
+          <h1 class="text-4xl font-semibold text-gray-800">Admin Dashboard</h1>
+          <p class="text-gray-600 mt-2">
+            Welcome back, Admin! Here's an overview of your recent activities.
+          </p>
+
+          <div
+            class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <div
+              class="bg-indigo-50 border-indigo-600 p-8 rounded-xl shadow-lg"
+            >
+              <h2 class="text-xl font-semibold text-indigo-700">Add Listing</h2>
+              <p class="text-gray-600">Create and publish a new listing.</p>
+            </div>
+            <div class="bg-blue-50 border-blue-600 p-8 rounded-xl shadow-lg">
+              <h2 class="text-xl font-semibold text-blue-700">
+                Active Listings
+              </h2>
+              <p class="text-gray-600">You have 10 active listings.</p>
+            </div>
+            <div
+              class="bg-yellow-50 border-yellow-600 p-8 rounded-xl shadow-lg"
+            >
+              <h2 class="text-xl font-semibold text-yellow-700">
+                Pending Listings
+              </h2>
+              <p class="text-gray-600">
+                You have 3 pending listings awaiting approval.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h2 class="text-2xl font-semibold text-gray-800">
+              Recent Activities
+            </h2>
+            <ul class="mt-4 space-y-8">
+              <li class="border-b pb-6">
+                <p class="text-gray-600">You updated your profile picture.</p>
+                <span class="text-sm text-gray-500">2 hours ago</span>
+              </li>
+              <li class="border-b pb-6">
+                <p class="text-gray-600">
+                  You created a new listing: "Sofa Set".
+                </p>
+                <span class="text-sm text-gray-500">1 day ago</span>
+              </li>
+              <li class="border-b pb-6">
+                <p class="text-gray-600">
+                  You received a new message from Jane Doe.
+                </p>
+                <span class="text-sm text-gray-500">3 days ago</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+
+    <footer class="bg-gray-800 text-white pt-16 pb-5">
+      <div class="max-w-screen-xl mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <!-- Column 1: About Us -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">About Us</h3>
+            <p class="text-gray-400">
+              We are a leading company offering the best products and services.
+              Our aim is to provide high-quality solutions to our customers.
+            </p>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Services</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact Us -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+            <p class="text-gray-400">123 Street Name, City, Country</p>
+            <p class="text-gray-400">Phone: +123 456 7890</p>
+            <p class="text-gray-400">Email: contact@example.com</p>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="mt-4 border-t border-gray-700 pt-5 text-center">
+          <p class="text-gray-400 text-sm">
+            © 2025 Company Name. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>

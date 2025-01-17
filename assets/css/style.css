@@ -1,0 +1,100 @@
+@import url(post.css);
+@import url(footer.css);
+@import url(form.css);
+@import url(media.css);
+
+:root {
+  --primary-bg: #fbbf24;
+  --primary-text: #fbbf24;
+  --secondary-bg: #1f2937;
+  --secondary-text: #1f2937;
+  --text-white: #fff;
+  --hover: #e5a80c;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.font-poppins {
+  font-family: poppins;
+}
+/* Focus Ring */
+input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 0.1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.btn_primary {
+  background-color: var(--primary-bg);
+  color: var(--text-white, #ffffff);
+}
+.btn_primary:hover {
+  background-color: var(--hover);
+  color: var(--text-white, #ffffff);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn_secondary {
+  background-color: var(--secondary-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+#divisionList li {
+  text-align: left;
+  color: var(--secondary-bg);
+  font-weight: 600;
+}
+
+.category-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.icon-img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.count {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.sticky {
+  z-index: 9999;
+}

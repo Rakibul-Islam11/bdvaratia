@@ -1,0 +1,9 @@
+/* Custom CSS for font size adjustment for smaller screens */
+@media (max-width: 920px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 678px) {
+}

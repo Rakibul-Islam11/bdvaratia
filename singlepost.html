@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BD varatiya | Your Website</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Potro+Sans+Bangla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome CDN for Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <!-- Add Tailwind CSS CDN in the <head> section -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body class="font-poppins">
+    <!-- Header Section -->
+    <header class="text-white p-4 sticky top-0 bg-gray-800">
+      <div
+        class="relative w-full h-full bg-cover bg-center max-w-screen-xl mx-auto"
+      >
+        <div class="flex flex-wrap justify-between items-center">
+          <!-- Left side: Logo & Menu -->
+          <div class="flex items-center justify-start w-full sm:w-auto">
+            <a href="index.html">
+              <img src="assets/image/Logo1.jpg" alt="Logo" class="h-8 mr-4" />
+            </a>
+            <nav class="w-full sm:w-auto mt-4 sm:mt-0 ml-5">
+              <ul
+                class="flex flex-wrap justify-center sm:justify-start space-x-4"
+              >
+                <li>
+                  <button
+                    id="languageButton"
+                    class="btn border-2 border-gray-600 rounded-md"
+                  >
+                    English
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Centered Right side: Login, Post & Search -->
+          <div
+            class="flex items-center space-x-4 w-full sm:w-auto mt-4 sm:mt-0"
+          >
+            <!-- Login Button -->
+            <a
+              href="login.html"
+              class="text-white px-4 py-2 flex items-center hover:text-yellow-300"
+            >
+              <i class="fa fa-right-to-bracket"></i>
+              Login | Registration
+            </a>
+
+            <!-- Post Button -->
+            <a href="add_post.html" class="btn btn_primary">Add Post</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="py-6 bg-gradient-to-r from-white-100 to-pink-300">
+        <div class="max-w-screen-xl mx-auto px-2">
+          <nav
+            class="flex items-center space-x-1 text-sm text-gray-800 font-semibold pb-1 cursor-pointer"
+          >
+            <a href="index.html" class="text-gray-700">Home /</a>
+            <span class="text-gray-500"> Catagory /</span>
+            <span class="text-yellow-500">Singlepost</span>
+          </nav>
+
+          <hr class="border-t-1 border-yellow-600 opacity-50" />
+        </div>
+      </section>
+
+      <section class="Single-post">
+        <div class="container max-w-screen-xl mx-auto">
+          <div class="flex flex-wrap lg:flex-nowrap gap-6">
+            <!-- পোস্ট ডিটেইলস (col-8) -->
+            <div class="w-full lg:w-8/12 bg-white rounded-lg shadow-lg p-5">
+              <h1 class="text-2xl font-bold text-gray-800">
+                Samsung Galaxy S21
+              </h1>
+              <div class="post_date mb-3 text-gray-500">
+                <span class="post_time">Posted on 05 Jan 7:19 pm,</span>
+                <span class="Post_location">Dhaka, mirpur</span>
+              </div>
+
+              <div class="image-gallery">
+                <!-- Main Image -->
+                <div class="main-image mb-4">
+                  <img
+                    id="mainImage"
+                    src="assets/image/008-1170x7850.jpg"
+                    alt="Main Image"
+                    class="w-full rounded-md"
+                  />
+                </div>
+
+                <!-- Thumbnail Slider -->
+                <div class="thumbnail-slider">
+                  <img
+                    src="assets/image/008-1170x750.jpg"
+                    alt="Image 1"
+                    class="thumbnail object-cover rounded-md cursor-pointer"
+                  />
+
+                  <img
+                    src="assets/image/post_image/fitted.jpg"
+                    alt="Image 1"
+                    class="thumbnail object-cover rounded-md cursor-pointer"
+                  />
+
+                  <img
+                    src="assets/image/post_image/fitted (2).jpg"
+                    alt="Image 1"
+                    class="thumbnail object-cover rounded-md cursor-pointer"
+                  />
+
+                  <img
+                    src="assets/image/post_image/fitted.jpg"
+                    alt="Image 1"
+                    class="thumbnail object-cover rounded-md cursor-pointer"
+                  />
+
+                  <img
+                    src="assets/image/post_image/fitted (2).jpg"
+                    alt="Image 1"
+                    class="thumbnail object-cover rounded-md cursor-pointer"
+                  />
+
+                  <img
+                    src="assets/image/post_image/fitted.jpg"
+                    alt="Image 1"
+                    class="thumbnail object-cover rounded-md cursor-pointer"
+                  />
+                </div>
+              </div>
+
+              <div class="flex gap-4 items-center pl-5 justify-between w-full">
+                <div class="left mt-5">
+                  <h1
+                    class="font-extrabold text-2xl text-gray-800 leading-tight"
+                  >
+                    ৳ 50,000
+                    <span class="text-sm text-gray-500">Fixer</span>
+                  </h1>
+                </div>
+                <div class="view flex justify-end">
+                  <h3 class="font-bold text-lg text-gray-800">View</h3>
+                  <span class="text-sm text-gray-600 ml-2 mt-1">363</span>
+                </div>
+              </div>
+
+              <div class="sPost_Discription pl-5">
+                <h3 class="text-lg font-semibold">Description</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                  Here goes the detailed description of the Samsung Galaxy S21.
+                  The phone is in excellent condition with all original
+                  accessories included. No scratches or damages.
+                </p>
+              </div>
+
+              <hr class="my-4" />
+              <h2 class="text-lg font-semibold text-gray-800 mb-2 pl-5">
+                Specifications:
+              </h2>
+              <ul class="list-disc pl-10 text-gray-800">
+                <li>6.2-inch AMOLED display</li>
+                <li>128GB storage, 8GB RAM</li>
+                <li>Triple camera setup</li>
+                <li>4000mAh battery</li>
+              </ul>
+              <hr class="mt-3" />
+            </div>
+
+            <!-- প্রোফাইল সেকশন (col-4) -->
+            <div
+              class="w-full lg:w-4/12 bg-white rounded-lg shadow-lg p-5 profile"
+            >
+              <!-- প্রোফাইল ইমেজ -->
+              <div class="flex text-left gap-4 items-start">
+                <!-- ইমেজ -->
+                <a href="">
+                  <img
+                    src="assets/image/pro.jpg"
+                    alt="Seller Profile"
+                    class="w-14 h-14 rounded-full"
+                  />
+                </a>
+
+                <!-- কনটেন্ট -->
+                <div>
+                  <a href=""
+                    ><h3 class="text-xl font-semibold text-gray-800">
+                      John Doe
+                    </h3></a
+                  >
+                  <p id="status" class="text-sm text-green-500">
+                    Active 2 hours ago
+                  </p>
+                  <!-- স্টোর -->
+                  <a href="#" class="if_stor"> Visit Store </a>
+                </div>
+              </div>
+
+              <hr class="my-4" />
+
+              <!-- Modal Toggle Button -->
+              <button
+                data-modal-target="default-modal"
+                data-modal-toggle="default-modal"
+                class="block text-white bg-gray-800 font-medium rounded-sm text-lg p-3 w-full text-center"
+              >
+                Chat with seller
+              </button>
+
+              <!-- Modal -->
+              <div
+                id="default-modal"
+                tabindex="-1"
+                aria-hidden="true"
+                class="hidden fixed inset-0 z-50 justify-center items-center w-full h-full bg-black bg-opacity-50"
+              >
+                <div
+                  class="relative bg-white rounded-lg shadow dark:bg-gray-700 max-w-2xl w-full"
+                >
+                  <!-- Modal Header -->
+                  <div
+                    class="flex justify-between items-center p-4 border-b dark:border-gray-600"
+                  >
+                    <div class="flex text-left gap-4 items-start">
+                      <!-- ইমেজ -->
+                      <a href="">
+                        <img
+                          src="assets/image/pro.jpg"
+                          alt="Seller Profile"
+                          class="w-12 h-12 rounded-full"
+                        />
+                      </a>
+
+                      <!-- কনটেন্ট -->
+                      <div>
+                        <a href=""
+                          ><h3 class="text-xl font-semibold text-gray-800">
+                            John Doe
+                          </h3></a
+                        >
+                        <p class="text-sm text-gray-500">Active 2 hours ago</p>
+                        <!-- স্টোর -->
+                        <a href="#" class="if_stor"> Visit Store </a>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-lg text-sm w-8 h-8 flex justify-center items-center"
+                      data-modal-hide="default-modal"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- Modal Body -->
+                  <div class="p-6">
+                    <!-- চ্যাট বক্স -->
+                    <div
+                      class="bg-gray-100 dark:bg-gray-800 p-4 rounded-md h-72 overflow-y-auto"
+                      id="chatMessages"
+                    >
+                      <!-- বিক্রেতার বার্তা -->
+                      <div class="mb-4 text-left">
+                        <p
+                          class="inline-block bg-gray-300 text-gray-700 dark:bg-gray-700 dark:text-gray-300 py-2 px-3 rounded-md"
+                        >
+                          <strong class="text-gray-900 dark:text-gray-200"
+                            >Seller:</strong
+                          >
+                          Hi, how can I help you?
+                        </p>
+                      </div>
+
+                      <!-- ব্যবহারকারীর বার্তা -->
+                      <div class="mb-4 text-right">
+                        <p
+                          class="inline-block bg-yellow-500 text-white py-2 px-3 rounded-md"
+                        >
+                          <strong>You:</strong> I have a question about your
+                          product.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- মেসেজ পাঠানোর ইনপুট -->
+                    <div class="mt-4 flex items-center">
+                      <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Type your message here..."
+                        class="flex-grow p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-yellow-500 dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                      />
+                      <button
+                        id="sendMessage"
+                        class="ml-2 bg-yellow-500 text-white px-4 py-2 rounded-sm hover:bg-yellow-600 transition duration-300 flex items-center"
+                      >
+                        <svg
+                          class="w-5 h-5 mr-2"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 3l14 9-14 9V3z"
+                          ></path>
+                        </svg>
+                        Send
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="my-3">
+                <div
+                  class="author-phone style2 bg-yellow-500 rounded-sm shadow-md"
+                >
+                  <div class="flex items-center p-3 ml-4">
+                    <!-- ফোন আইকন -->
+                    <div class="icon mr-2">
+                      <i class="fas fa-phone-alt text-lg"></i>
+                    </div>
+
+                    <!-- ফোন নম্বর -->
+                    <a
+                      id="number"
+                      href="tel:+14 889 5875 88X"
+                      class="flex items-center"
+                    >
+                      <span class="number-main pre">
+                        <span>Show Number </span> +880 16XXXX
+                      </span>
+
+                      <span class="number-main post hidden">
+                        +8801629828611
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="WhatsApp">
+                <div class="whatsapp-button">
+                  <a
+                    href="https://wa.me/+14xxxxxxxxx?text=Hello%20there!"
+                    target="_blank"
+                    class="flex items-center space-x-3 bg-green-500 text-white p-3 pl-6"
+                  >
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <!-- Icon size increased -->
+                    <span class="ml-4">Chat on WhatsApp</span>
+                    <!-- Space increased after the icon -->
+                  </a>
+                </div>
+              </div>
+
+              <!-- Safety Alert -->
+              <div class="bg-yellow-100 text-yellow-700 p-4 rounded-lg mt-4">
+                <h4 class="font-bold mb-2">Safety Tips</h4>
+                <ul class="list-disc pl-5 text-sm">
+                  <li>Meet in a public place.</li>
+                  <li>Check the product thoroughly before purchasing.</li>
+                  <li>Do not share personal information unnecessarily.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="home-post-section" class="p-4">
+        <div class="container max-w-screen-xl mx-auto">
+          <!-- Section Heading -->
+          <div class="section_tittle flex items-center justify-between">
+            <h2 class="text-3xl font-bold inline-block mb-2 text-yellow-500">
+              Tolate Post
+            </h2>
+
+            <a
+              href="catagory.html"
+              class="btn btn_primary mb-3 flex items-center"
+              type="button"
+              aria-label="View all posts"
+            >
+              View all list &gt;&gt;
+            </a>
+          </div>
+
+          <hr class="border-t-1 border-blue-400 mx-auto mb-6" />
+
+          <div class="flex flex-wrap">
+            <!-- পোস্ট গ্রিড (৬ গ্রিড) -->
+            <div class="w-full bg-white rounded-sm shadow-md p-4">
+              <!-- গ্রিড লেআউট -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+                <!-- পোস্ট ২ -->
+                <div class="post-card">
+                  <!-- পোস্ট ইমেজ -->
+                  <a href="singlepost.html">
+                    <img
+                      src="assets/image/008-1170x7850.jpg"
+                      alt="Samsung mobile for sale"
+                      class="post-image"
+                    />
+                  </a>
+                  <!-- পোস্ট কন্টেন্ট -->
+                  <div class="post-content">
+                    <div>
+                      <!-- পোস্ট শিরোনাম -->
+                      <a href="singlepost.html">
+                        <h2 class="post-title">Samsung mobile sell</h2>
+                      </a>
+                      <!-- ক্যাটেগরি লিঙ্কস -->
+                      <div class="category-links">
+                        <a href="#" class="category bachelor">Bachelor</a>
+                        <a href="#" class="category rent">Rent</a>
+                        <a href="#" class="category available">Available</a>
+                      </div>
+                      <!-- পোস্ট মূল্য -->
+                      <h4 class="post-price">৳ 1500</h4>
+                      <!-- পোস্ট বিবরণ -->
+                      <ul class="post-location">
+                        <li>Dhaka</li>
+                        <li>Mirpur</li>
+                      </ul>
+                      <p class="post-description">
+                        A brief description or details of the post can go here,
+                        which will give an idea about the content.
+                      </p>
+                    </div>
+                    <!-- যোগাযোগ এবং অন্যান্য অপশন -->
+                    <div class="post-footer">
+                      <!-- Profile Image -->
+                      <a href="profile.html" class="profile">
+                        <img
+                          src="assets/image/pro.jpg"
+                          alt="Profile"
+                          class="profile-image"
+                        />
+                      </a>
+                      <!-- Buttons Container on the Right -->
+                      <div class="post-buttons">
+                        <!-- Bookmark -->
+                        <button type="button" class="btn-icon">
+                          <i class="fas fa-bookmark"></i>
+                          <span>Bookmark</span>
+                        </button>
+                        <!-- Share -->
+                        <button type="button" class="btn-icon">
+                          <i class="fas fa-share"></i>
+                          <span>Share</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="post-card">
+                  <!-- পোস্ট ইমেজ -->
+                  <a href="singlepost.html">
+                    <img
+                      src="assets/image/008-1170x7850.jpg"
+                      alt="Samsung mobile for sale"
+                      class="post-image"
+                    />
+                  </a>
+                  <!-- পোস্ট কন্টেন্ট -->
+                  <div class="post-content">
+                    <div>
+                      <!-- পোস্ট শিরোনাম -->
+                      <a href="singlepost.html">
+                        <h2 class="post-title">Samsung mobile sell</h2>
+                      </a>
+                      <!-- ক্যাটেগরি লিঙ্কস -->
+                      <div class="category-links">
+                        <a href="#" class="category bachelor">Bachelor</a>
+                        <a href="#" class="category rent">Rent</a>
+                        <a href="#" class="category available">Available</a>
+                      </div>
+                      <!-- পোস্ট মূল্য -->
+                      <h4 class="post-price">৳ 1500</h4>
+                      <!-- পোস্ট বিবরণ -->
+                      <ul class="post-location">
+                        <li>Dhaka</li>
+                        <li>Mirpur</li>
+                      </ul>
+                      <p class="post-description">
+                        A brief description or details of the post can go here,
+                        which will give an idea about the content.
+                      </p>
+                    </div>
+                    <!-- যোগাযোগ এবং অন্যান্য অপশন -->
+                    <div class="post-footer">
+                      <!-- Profile Image -->
+                      <a href="profile.html" class="profile">
+                        <img
+                          src="assets/image/pro.jpg"
+                          alt="Profile"
+                          class="profile-image"
+                        />
+                      </a>
+                      <!-- Buttons Container on the Right -->
+                      <div class="post-buttons">
+                        <!-- Bookmark -->
+                        <button type="button" class="btn-icon">
+                          <i class="fas fa-bookmark"></i>
+                          <span>Bookmark</span>
+                        </button>
+                        <!-- Share -->
+                        <button type="button" class="btn-icon">
+                          <i class="fas fa-share"></i>
+                          <span>Share</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <!-- Back to Top Button -->
+        <a
+          href="#top"
+          class="fixed bottom-5 right-5 bg-gray-700 text-yellow-400 p-2 shadow-lg hidden"
+          id="back-to-top"
+          title="Back to Top"
+        >
+          <i class="fa fa-solid fa-arrow-up"></i>
+        </a>
+      </section>
+
+      <footer class="footer bg-gray-800">
+        <div class="container">
+          <div class="footer-grid">
+            <!-- Column 1: About Us -->
+            <div>
+              <h3>About Us</h3>
+              <p>
+                We are a leading company offering the best products and
+                services. Our aim is to provide high-quality solutions to our
+                customers.
+              </p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Contact Us -->
+            <div>
+              <h3>Contact Us</h3>
+              <p>123 Street Name, City, Country</p>
+              <p>Phone: +123 456 7890</p>
+              <p>Email: contact@example.com</p>
+            </div>
+          </div>
+
+          <!-- Footer Bottom -->
+          <div class="footer-bottom">
+            <p>© 2025 Company Name. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Scripts -->
+
+    <script src="assets/js/singlepost.js"></script>
+    <script src="assets/js/custome.js"></script>
+  </body>
+</html>
