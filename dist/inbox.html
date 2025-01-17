@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Your Website</title>
+
+    <!-- Google Font (Poppins) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Potro+Sans+Bangla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome CDN for Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" crossorigin href="/assets/style-CRy3IUYz.css">
+  </head>
+  <body class="font-poppins">
+    <header class="text-white p-4 sticky top-0 bg-gray-800">
+      <div
+        class="relative w-full h-full bg-cover bg-center max-w-screen-xl mx-auto"
+      >
+        <div class="flex flex-wrap justify-between items-center">
+          <!-- Left side: Logo & Menu -->
+          <div class="flex items-center justify-start w-full sm:w-auto">
+            <a href="index.html">
+              <img src="/assets/Logo1-DkI-_gk-.jpg" alt="Logo" class="h-8 mr-4" />
+            </a>
+            <nav class="w-full sm:w-auto mt-4 sm:mt-0 lg:ml-5">
+              <ul
+                class="flex flex-wrap justify-center sm:justify-start space-x-4"
+              >
+                <li>
+                  <button
+                    id="languageButton"
+                    class="btn border-2 border-gray-600 rounded-md"
+                  >
+                    English
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Centered Right side: Login, Post & Search -->
+          <div
+            class="flex items-center space-x-4 w-full sm:w-auto mt-4 sm:mt-0"
+          >
+            <!-- Search Button -->
+            <button
+              id="searchModalButton"
+              class="bg-transparent text-white px-4 py-2 hover:text-yellow-300"
+            >
+              <i class="fas fa-search"></i> Search
+            </button>
+
+            <!-- Modal -->
+            <div
+              id="searchModal"
+              class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]"
+            >
+              <div
+                class="bg-white text-gray-800 rounded-lg shadow-lg p-6 w-11/12 sm:w-auto"
+              >
+                <!-- Modal Header -->
+                <div class="flex justify-between items-center mb-2">
+                  <h2 class="text-xl font-bold">Search</h2>
+                  <button id="closeModalButton" class="text-gray-500 text-2xl">
+                    &times;
+                  </button>
+                </div>
+                <!-- Modal Content -->
+                <hr class="mb-2" />
+                <form class="form-wrapper">
+                  <!-- Category -->
+                  <label for="category" class="form-label">Category:</label>
+                  <select id="category" class="form-select">
+                    <option value="">Select Category</option>
+                    <option value="family">Family</option>
+                    <option value="bachelor">Bachelor</option>
+                    <option value="office">Office</option>
+                  </select>
+
+                  <!-- District -->
+                  <label for="district" class="form-label">District:</label>
+                  <select id="district" class="form-select">
+                    <option value="">Select District</option>
+                    <option value="dhaka">Dhaka</option>
+                    <option value="chattogram">Chattogram</option>
+                    <option value="rajshahi">Rajshahi</option>
+                  </select>
+
+                  <!-- Sub-district (Thana) -->
+                  <label for="subdistrict" class="form-label"
+                    >Sub-district (Thana):</label
+                  >
+                  <select id="subdistrict" class="form-select">
+                    <option value="">Select Sub-district</option>
+                    <option value="gulshan">Gulshan</option>
+                    <option value="mirpur">Mirpur</option>
+                    <option value="uttara">Uttara</option>
+                  </select>
+
+                  <!-- Price Range -->
+                  <label for="priceRange" class="form-label"
+                    >Price Range:</label
+                  >
+                  <div class="form-price-range">
+                    <input
+                      type="number"
+                      id="minPrice"
+                      placeholder="Min Price"
+                      class="form-input"
+                    />
+                    <input
+                      type="number"
+                      id="maxPrice"
+                      placeholder="Max Price"
+                      class="form-input"
+                    />
+                  </div>
+                  <button class="form-button">Search</button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Login Button -->
+            <a
+              href="login.html"
+              class="text-white px-4 py-2 flex items-center hover:text-yellow-300"
+            >
+              <i class="fa fa-inbox pr-2"></i>
+              Inbox
+            </a>
+
+            <!-- Post Button -->
+            <a href="add_post.html" class="btn btn_primary">Add Post</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="chat-section bg-gray-50 py-12">
+      <div class="container max-w-screen-xl mx-auto">
+        <div class="bg-gray-100 shadow-lg rounded-lg flex overflow-hidden">
+          <!-- Left Sidebar: Message List -->
+          <div class="w-1/3 bg-gray-100 p-4 border-r">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="font-semibold text-lg text-gray-800">Messages</h2>
+
+              <div class="flex items-center space-x-4">
+                <i
+                  class="fas fa-trash cursor-pointer hover:text-red-500 transition duration-300"
+                ></i>
+                <i
+                  class="fas fa-exclamation-circle cursor-pointer hover:text-yellow-500 transition duration-300"
+                ></i>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Message Item 1 -->
+              <div
+                class="flex items-center hover:bg-gray-200 p-3 rounded-md cursor-pointer"
+              >
+                <div
+                  class="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center text-gray-700 mr-4"
+                >
+                  <a href="profile.html">
+                    <img
+                      src="assets/image/pro.jpg "
+                      class="rounded-full"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-semibold text-gray-800">John Doe</h3>
+                  <p class="text-sm text-gray-600">
+                    Hi, is the product still available?
+                  </p>
+                </div>
+                <span class="text-xs text-gray-400">10:45 AM</span>
+              </div>
+
+              <!-- Message Item 2 -->
+              <div
+                class="flex items-center hover:bg-gray-200 p-3 rounded-md cursor-pointer"
+              >
+                <div
+                  class="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center text-gray-700 mr-4"
+                >
+                  <a href="profile.html">
+                    <img
+                      src="assets/image/pro.jpg "
+                      class="rounded-full"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-semibold text-gray-800">Jane Smith</h3>
+                  <p class="text-sm text-gray-600">When can we meet?</p>
+                </div>
+                <span class="text-xs text-gray-400">Yesterday</span>
+              </div>
+
+              <!-- Message Item 3 -->
+              <div
+                class="flex items-center hover:bg-gray-200 p-3 rounded-md cursor-pointer"
+              >
+                <div
+                  class="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center text-gray-700 mr-4"
+                >
+                  <a href="profile.html">
+                    <img
+                      src="assets/image/pro.jpg "
+                      class="rounded-full"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-semibold text-gray-800">Admin</h3>
+                  <p class="text-sm text-gray-600">
+                    Your account has been verified successfully!
+                  </p>
+                </div>
+                <span class="text-xs text-gray-400">2 days ago</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Message Details -->
+          <div class="w-2/3 p-6">
+            <a href="post-details.html" class="block bg-gray-100 mb-5">
+              <div
+                class="flex items-center border-b border-gray-200 transition duration-300"
+              >
+                <div class="flex-shrink-0">
+                  <img
+                    src="/assets/008-1170x7850-B6gc9H70.jpg"
+                    class="w-16 h-16 object-cover"
+                    alt="User Photo"
+                  />
+                </div>
+                <div class="ml-4 flex-1">
+                  <h3 class="font-semibold text-gray-800">John Doe</h3>
+                  <p class="text-sm text-gray-600 mb-2">
+                    Hi, is the product still available?
+                  </p>
+
+                  <!-- End of reply section -->
+                </div>
+              </div>
+            </a>
+
+            <div class="space-y-4">
+              <!-- First Post (Message 1) -->
+              <div class="flex items-center">
+                <div
+                  class="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center text-gray-700 mr-4"
+                >
+                  <img
+                    src="/assets/pro-BClul23Z.jpg"
+                    alt="User Photo"
+                    class="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg max-w-xs">
+                  <p class="text-gray-700">
+                    Hi, is the product still available?
+                  </p>
+                </div>
+              </div>
+
+              <!-- Reply Message -->
+              <div class="flex justify-end items-center">
+                <div class="bg-yellow-100 p-4 rounded-lg max-w-xs ml-auto">
+                  <p class="text-gray-700">
+                    Yes, it's available. You can contact me for further details.
+                    😊
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center mt-6 p-4 bg-gray-100 rounded-lg shadow-md w-full"
+              >
+                <!-- Photo Upload Icon -->
+                <label
+                  for="photo-upload"
+                  class="text-xl text-gray-500 mr-4 cursor-pointer hover:text-blue-500 transition duration-300"
+                >
+                  <i class="fas fa-image"></i>
+                </label>
+                <input
+                  type="file"
+                  id="photo-upload"
+                  class="hidden"
+                  accept="image/*"
+                />
+
+                <!-- Chat Input -->
+                <div class="flex-grow">
+                  <div class="flex w-full bg-yellow-400 shadow-lg rounded-full">
+                    <input
+                      type="text"
+                      placeholder="আপনার অনুসন্ধান লিখুন..."
+                      class="flex-grow px-8 py-3 text-lg bg-gray-800 text-white rounded-l-full focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    />
+                    <button
+                      class="px-6 text-2xl text-gray-800 bg-yelloy-400 rounded-r-full hover:bg-gray-100 transition duration-300"
+                    >
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer class="bg-gray-800 text-white pt-16 pb-5">
+      <div class="max-w-screen-xl mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <!-- Column 1: About Us -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">About Us</h3>
+            <p class="text-gray-400">
+              We are a leading company offering the best products and services.
+              Our aim is to provide high-quality solutions to our customers.
+            </p>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Services</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact Us -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+            <p class="text-gray-400">123 Street Name, City, Country</p>
+            <p class="text-gray-400">Phone: +123 456 7890</p>
+            <p class="text-gray-400">Email: contact@example.com</p>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="mt-4 border-t border-gray-700 pt-5 text-center">
+          <p class="text-gray-400 text-sm">
+            © 2025 Company Name. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/custome.js"></script>
+  </body>
+</html>
