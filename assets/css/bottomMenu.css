@@ -1,0 +1,81 @@
+/* Bottom Menu Main Styles */
+.bottom_menu_main {
+    position: fixed;
+    bottom: 0;
+    left: -16px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+/* Menu Item List */
+.bottom_menu_item_list {
+    display: flex;
+    justify-content: center;
+    /* Items equally spaced */
+    align-items: center;
+    padding: 10px 0 10px 0;
+    /* Ensure proper spacing */
+    max-width: 100%;
+    /* Full width for smaller screens */
+    margin: 0 auto;
+    /* Center the menu */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+    
+}
+
+/* Menu Items */
+.bottom_menu_item {
+    text-align: center;
+    flex: 1;
+    /* Equal space for all items */
+    cursor: pointer;
+}
+
+/* Icon Styles */
+.bottom_menu_item span i,
+.bottom_menu_item .circle i {
+    font-size: 20px;
+    color: #555555;
+}
+
+/* Text Styles */
+.bottom_menu_item p {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #555555;
+}
+
+/* Special Button Styles */
+.special_button {
+    position: relative;
+    margin-top: -25px;
+    /* Lift the button upwards */
+}
+
+.special_button .circle {
+    width: 50px;
+    height: 50px;
+    background-color: #ffc107;
+    /* Yellow color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.special_button .circle i {
+    font-size: 24px;
+    color: white;
+    /* Icon color */
+}
+
+.special_button p {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #555555;
+}
