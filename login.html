@@ -26,6 +26,7 @@
 
   <!-- External Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/bottomMenu.css">
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="/tailwind/main.css">
 
@@ -47,64 +48,24 @@
     <!-- Header Section -->
     <header class="text-white p-4 sticky top-0 bg-gray-800 ">
       <!-- responsive menu start -->
-      <div class="flex md:hidden flex-row justify-between bg-gray-800 items-center">
+      <div class="flex md:hidden flex-row gap-8 justify-around bg-gray-800 items-center">
         <!-- phone menus start -->
+        <!-- Logo -->
         <div>
-          <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-          <div class="drawer-content">
-            <!-- Hamburger Button -->
-            <label for="my-drawer" class="btn btn-primary drawer-button">
-              <span><i class="fa-solid fa-bars"></i></span>
-            </label>
-          </div>
-    
-          <div class="drawer-side">
-            <!-- Sidebar Overlay -->
-            <label for="my-drawer" class="drawer-overlay"></label>
-            <!-- Sidebar Content -->
-            <ul class="menu bg-base-200 text-base-content h-[95vh] w-80 p-4 flex flex-col relative">
-              <!-- Logo -->
-              <div>
-                <a href="index.html">
-                  <img src="assets/image/Logo1.jpg" alt="Logo" class="h-14 mr-4" />
-                </a>
-              </div>
-    
-              <!-- Close Button -->
-              <label for="my-drawer" class="absolute top-2 right-2 text-4xl text-gray-600 cursor-pointer">
-                &times;
-              </label>
-    
-              <!-- Sidebar Items -->
-    
-              <a href="add_post.html" class="btn btn-primary bg-yellow-400 text-white">Add Post</a>
-              <a href="add_post.html" class="btn mt-2 btn-primary bg-slate-800 text-white">Blog</a>
-              <a href="add_post.html" class="btn mt-2 btn-primary bg-slate-800 text-white">Blog</a>
-    
-              <!-- Bottom Section -->
-              <div class="mt-auto">
-                <h1 class="mb-2">Select Language</h1>
-                <li>
-                  <button id="languageButton" class="btn border-2 border-gray-600 rounded-md">
-                    English
-                  </button>
-                </li>
-              </div>
-            </ul>
-          </div>
+          <a href="index.html">
+            <img src="assets/image/Logo1.jpg" alt="Logo" class="h-14 " />
+          </a>
         </div>
         <!-- phone menus end -->
-    
         <!-- login and res button start -->
-        <div>
-          <a href="login.html" class="text-white px-4 py-2 flex items-center hover:text-yellow-300">
-            <i class="fa fa-right-to-bracket"></i>
-            Login | Registration
+        <div class="text-end">
+          <a href="login.html" class="text-white text-end flex gap-2 items-center hover:text-yellow-300">
+            <span><i class="fa fa-right-to-bracket "></i></span>
+            <p>Login | Registration</p>
           </a>
         </div>
         <!-- login and res button end -->
       </div>
-      <!-- responsive menu end -->
     
     
     
@@ -523,7 +484,42 @@
           </div>
         </div>
       </section>
+<!--Bottom Menu Starts-->
+<section class="bottom_menu_main block md:hidden shadow-2xl mx-auto w-[100%]">
+  <div class="bottom_menu_inner">
+    <div class="bottom_menu_item_list">
+      <a href="index.html" class="bottom_menu_item">
+        <div>
+          <span><i class="fa-solid fa-house"></i></span>
+          <p>Home</p>
+        </div>
+      </a>
+      <div class="bottom_menu_item">
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <p>Search</p>
+      </div>
 
+      <a href="add_post.html">
+        <div class="bottom_menu_item special_button ">
+          <div class="circle">
+            <i class="fa-solid fa-circle-plus shadow-2xl"></i>
+          </div>
+          <p>Free Ad</p>
+
+        </div>
+      </a>
+      <div class="bottom_menu_item">
+        <span><i class="fa-solid fa-comments"></i></span>
+        <p>Chat</p>
+      </div>
+      <div class="bottom_menu_item">
+        <span><i class="fa-solid fa-user"></i></span>
+        <p>Account</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Bottom Menu Ends-->
       <footer class="footer bg-gray-800">
         <div class="container">
           <div class="footer-grid">
