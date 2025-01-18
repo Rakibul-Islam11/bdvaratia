@@ -1,41 +1,40 @@
-/* Styling for the Post Details Section */
-.image-gallery .main-image img {
-    transition: transform 0.3s ease-in-out;
-}
-
-.image-gallery .thumbnail-slider img {
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.image-gallery .thumbnail-slider img:hover {
-    transform: scale(1.05);
-    border-color: #facc15;
-    /* Yellow border */
-}
-
-.sPost_Discription h3 {
-    font-size: 1.25rem;
-    color: #374151;
-    /* Gray-800 */
+.specifications ul {
+    list-style: none;
+    /* Removes default black dots */
+    padding: 0;
+    /* Removes extra padding */
+    margin: 0;
+    /* Removes extra margin */
 }
 
 .specifications ul li {
-    padding-left: 1rem;
     position: relative;
+    /* Allows absolute positioning for the dots */
+    padding-left: 2.5rem;
+    /* Space between dot and text */
+    font-size: 1.1rem;
+    /* Adjusted text size */
+    font-weight: 500;
+    /* Bold text for better readability */
+    line-height: 1.8;
+    /* Ensures proper spacing between lines */
 }
 
 .specifications ul li::before {
     content: '\2022';
+    /* Custom bullet character (dot) */
+    position: absolute;
+    /* Ensures dot aligns properly */
+    left: 0;
+    /* Positions the dot at the start of the line */
+    top: -0.6rem;
+    /* Aligns the dot vertically with the text */
     color: #facc15;
-    /* Yellow */
+    /* Yellow color for the dot */
+    font-size: 3rem;
+    /* Large size for the dot */
     font-weight: bold;
-    display: inline-block;
-    width: 1rem;
-    margin-left: -1rem;
-}
-
-.view i {
-    font-size: 1.25rem;
-    color: #facc15;
+    /* Bold dot */
+    line-height: 1;
+    /* Ensures proper vertical alignment */
 }
