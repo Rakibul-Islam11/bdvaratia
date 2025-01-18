@@ -79,7 +79,11 @@
   border-color: #3b82f6; /* Blue border on focus */
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); /* Blue outline */
 }
-
+@media only screen and (max-width:370px){
+  .frress{
+    display: none;
+  }
+}
     </style>
   </head>
   <body class="font-poppins">
@@ -98,7 +102,7 @@
   <!-- login and res button start -->
   <div class="text-end">
     <a href="login.html" class="text-white text-end flex gap-2 items-center hover:text-yellow-300">
-      <span><i class="fa fa-right-to-bracket "></i></span>
+      <span class="frress"><i class="fa fa-right-to-bracket "></i></span>
       <p>Login | Registration</p>
     </a>
   </div>
@@ -351,7 +355,7 @@
 <!--Bottom Menu Ends-->
     <!-- Footer Section -->
 
-    <footer class="bg-gray-800 text-white pt-16 pb-5">
+    <footer class="bg-gray-800 text-white pt-16 pb-5 mb-24 md:mb-0">
       <div class="max-w-screen-xl mx-auto px-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <!-- Column 1: About Us -->
