@@ -1,0 +1,88 @@
+/* General Styling for Chat Section */
+.chat-section {
+    background-color: #f9fafb;
+    padding: 2rem 0;
+}
+
+.chat-section .container {
+    padding: 0 1rem;
+}
+
+.chat-section .w-full {
+    width: 100%;
+}
+
+.chat-section .rounded-full {
+    border-radius: 9999px;
+}
+
+/* Sidebar */
+.chat-section .border-r {
+    border-right: 1px solid #e5e7eb;
+}
+
+.chat-section h2 {
+    font-size: 1.25rem;
+}
+
+/* Message Items */
+.chat-section .truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    width: 100%;
+    background-color: #facc15;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 9999px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    background-color: #1f2937;
+    color: #fff;
+    border: none;
+    border-radius: 9999px 0 0 9999px;
+}
+
+.search-bar input:focus {
+    box-shadow: 0 0 0 2px #facc15;
+}
+
+.search-bar button {
+    padding: 0 1.5rem;
+    font-size: 1.25rem;
+    background-color: #facc15;
+    color: #1f2937;
+    border: none;
+    border-radius: 0 9999px 9999px 0;
+}
+
+.search-bar button:hover {
+    background-color: #eab308;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .chat-section .flex {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar input {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .search-bar button {
+        padding: 0.6rem;
+        font-size: 0.95rem;
+    }
+}
