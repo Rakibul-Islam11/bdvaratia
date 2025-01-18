@@ -6,105 +6,212 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Your Website</title>
 
-    <!-- Google Font (Poppins) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Potro+Sans+Bangla:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-    />
-    <!-- FontAwesome CDN for Icons -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      rel="stylesheet"
-    />
-
+  <!-- Google Font (Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- font awesone cdn  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
+    integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- External Stylesheet -->
-
+
+    <style>
+      /* General Form Styles */
+  .form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    outline: none;
+    font-size: 1rem;
+    color: #374151;
+  }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  }
+
+  .form-radio {
+    height: 1.25rem;
+    width: 1.25rem;
+    border: 2px solid #d1d5db;
+    accent-color: #3b82f6;
+  }
+
+  .form-textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+
+  /* All input fields */
+.form-input,
+.form-select,
+.form-textarea {
+  background-color: #ffffff; /* White background */
+  color: #374151; /* Text color */
+  border: 1px solid #d1d5db; /* Light gray border */
+}
+
+/* On focus */
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  background-color: #ffffff; /* Keep background white on focus */
+  border-color: #3b82f6; /* Blue border on focus */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); /* Blue outline */
+}
+
+    </style>
     <link rel="stylesheet" crossorigin href="/assets/form-m6ED-gqS.css">
     <link rel="stylesheet" crossorigin href="/assets/style-CRy3IUYz.css">
-    <link rel="stylesheet" crossorigin href="/assets/main-Cr2Bbvbg.css">
+    <link rel="stylesheet" crossorigin href="/assets/main-C8saB477.css">
   </head>
-  <body class="font-poppins bg-red-400">
+  <body class="font-poppins">
     <!-- Header Section -->
     <header class="text-white p-4 sticky top-0 bg-gray-800">
-      <div
-        class="relative w-full h-full bg-cover bg-center max-w-screen-xl mx-auto"
-      >
-        <div class="flex flex-wrap justify-between items-center">
-          <!-- Left side: Logo & Menu -->
-          <div class="flex items-center justify-start w-full sm:w-auto">
-            <a href="index.html">
-              <img src="/assets/Logo1-DkI-_gk-.jpg" alt="Logo" class="h-8 mr-4" />
-            </a>
-            <nav class="w-full sm:w-auto mt-4 sm:mt-0 lg:ml-5">
-              <ul
-                class="flex flex-wrap justify-center sm:justify-start space-x-4"
-              >
-                <li>
-                  <button
-                    id="languageButton"
-                    class="btn border-2 border-gray-600 rounded-md"
-                  >
-                    English
-                  </button>
-                </li>
-              </ul>
-            </nav>
+<!-- responsive menu start -->
+<div class="flex md:hidden flex-row gap-8 justify-around bg-gray-800 items-center">
+  <!-- phone menus start -->
+  <!-- Logo -->
+  <div>
+    <a href="index.html">
+      <img src="/assets/Logo1-DkI-_gk-.jpg" alt="Logo" class="h-14 " />
+    </a>
+  </div>
+  <!-- phone menus end -->
+  <!-- login and res button start -->
+  <div class="text-end">
+    <a href="login.html" class="text-white text-end flex gap-2 items-center hover:text-yellow-300">
+      <span><i class="fa fa-right-to-bracket "></i></span>
+      <p>Login | Registration</p>
+    </a>
+  </div>
+  <!-- login and res button end -->
+</div>
+<!-- responsive menu end -->
+    <div class="relative w-full h-full bg-cover bg-center max-w-screen-xl mx-auto hidden md:block">
+      <div class="flex flex-wrap justify-between items-center">
+        <!-- Left side: Logo & Menu -->
+        <div class="flex items-center justify-start w-full sm:w-auto">
+          <a href="index.html">
+            <img src="/assets/Logo1-DkI-_gk-.jpg" alt="Logo" class="h-14 mr-4" />
+          </a>
+          <nav class="w-full sm:w-auto mt-4 sm:mt-0 lg:ml-5">
+            <ul class="flex flex-wrap justify-center sm:justify-start space-x-4">
+              <li>
+                <button id="languageButton" class="btn border-2 border-gray-600 rounded-md">
+                  English
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+    
+        <!-- Centered Right side: Login, Post & Search -->
+        <div class="flex items-center space-x-4 w-full sm:w-auto mt-4 sm:mt-0">
+          <!-- Search Button -->
+          <button id="searchModalButton" class="bg-transparent text-white px-4 py-2 hover:text-yellow-300">
+            <i class="fas fa-search"></i> Search
+          </button>
+    
+          <!-- Modal -->
+          <div id="searchModal"
+            class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
+            <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6 w-11/12 sm:w-auto">
+              <!-- Modal Header -->
+              <div class="flex justify-between items-center mb-2">
+                <h2 class="text-xl font-bold">Search</h2>
+                <button id="closeModalButton" class="text-gray-500 text-2xl">
+                  &times;
+                </button>
+              </div>
+              <!-- Modal Content -->
+              <hr class="mb-2" />
+              <form class="form-wrapper">
+                <!-- Category -->
+                <label for="category" class="form-label">Category:</label>
+                <select id="category" class="form-select">
+                  <option value="">Select Category</option>
+                  <option value="family">Family</option>
+                  <option value="bachelor">Bachelor</option>
+                  <option value="office">Office</option>
+                </select>
+    
+                <!-- District -->
+                <label for="district" class="form-label">District:</label>
+                <select id="district" class="form-select">
+                  <option value="">Select District</option>
+                  <option value="dhaka">Dhaka</option>
+                  <option value="chattogram">Chattogram</option>
+                  <option value="rajshahi">Rajshahi</option>
+                </select>
+    
+                <!-- Sub-district (Thana) -->
+                <label for="subdistrict" class="form-label">Sub-district (Thana):</label>
+                <select id="subdistrict" class="form-select">
+                  <option value="">Select Sub-district</option>
+                  <option value="gulshan">Gulshan</option>
+                  <option value="mirpur">Mirpur</option>
+                  <option value="uttara">Uttara</option>
+                </select>
+    
+                <!-- Price Range -->
+                <label for="priceRange" class="form-label">Price Range:</label>
+                <div class="form-price-range">
+                  <input type="number" id="minPrice" placeholder="Min Price" class="form-input" />
+                  <input type="number" id="maxPrice" placeholder="Max Price" class="form-input" />
+                </div>
+                <button class="form-button">Search</button>
+              </form>
+            </div>
           </div>
-
-          <!-- Centered Right side: Login, Post & Search -->
-          <div
-            class="flex items-center space-x-4 w-full sm:w-auto mt-4 sm:mt-0"
-          >
-            <!-- Login Button -->
-            <a
-              href="login.html"
-              class="text-white px-4 py-2 flex items-center hover:text-yellow-300"
-            >
-              <i class="fas fa-right-to-bracket"></i>
-              Login | Registration
-            </a>
-
-            <!-- Post Button -->
-            <a href="add_post.html" class="btn btn_primary">Add Post</a>
-          </div>
+    
+          <!-- Login Button -->
+          <a href="login.html" class="text-white px-4 py-2 flex items-center hover:text-yellow-300">
+            <i class="fa fa-right-to-bracket"></i>
+            Login | Registration
+          </a>
+    
+          <!-- Post Button -->
+          <a href="add_post.html" class="btn btn_primary">Add Post</a>
         </div>
       </div>
+    </div>
     </header>
 
     <!--END Hero Section -->
 
     <section class="bg-gray-100 py-8">
-      <div class="max-w-4xl mx-auto bg-white p-6 rounded-md shadow-md">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Add New Post</h2>
-        <form class="form-wrapper gap-0">
-          <div class="tittle">
-            <label for="tittle" class="form-label">Post Tittle</label>
-            <input
-              type="text"
-              class="form-input"
-              placeholder="This is tittle"
-            />
+      <div class="max-w-4xl mx-auto bg-white p-8 rounded-md shadow-xl">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+          Add New Post
+        </h2>
+        <form class="grid gap-6">
+          <!-- Post Title -->
+          <div>
+            <label for="tittle" class="form-label">Post Title</label>
+            <input type="text" id="tittle" class="form-input" placeholder="Enter your post title" />
           </div>
-          <div class="category-subcategory flex items-center space-x-4 my-3">
-            <!-- Category -->
-            <div class="category w-1/2">
-              <label for="category" class="form-label">Category:</label>
+    
+          <!-- Category and Subcategory -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="category" class="form-label">Category</label>
               <select id="category" class="form-select">
                 <option value="">Select Category</option>
                 <option value="family">Family</option>
@@ -112,10 +219,8 @@
                 <option value="office">Office</option>
               </select>
             </div>
-
-            <!-- Subcategory -->
-            <div class="subcategory w-1/2">
-              <label for="subcategory" class="form-label">Subcategory:</label>
+            <div>
+              <label for="subcategory" class="form-label">Subcategory</label>
               <select id="subcategory" class="form-select">
                 <option value="">Select Subcategory</option>
                 <option value="family">Family</option>
@@ -124,36 +229,24 @@
               </select>
             </div>
           </div>
-
-          <div class="flex items-center space-x-4 my-3">
-            <!-- Price Range -->
-            <div class="price-range w-1/2">
-              <label for="priceRange" class="form-label">Price Range:</label>
-              <input
-                type="number"
-                id="Price"
-                placeholder="Price"
-                class="form-input"
-              />
+    
+          <!-- Price Range and Mobile -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="price" class="form-label">Price Range</label>
+              <input type="number" id="price" class="form-input" placeholder="Enter price" />
             </div>
-            <!-- Mobile Number -->
-            <div class="mobile-number w-1/2">
+            <div>
               <label for="mobile" class="form-label">Mobile Number</label>
-              <input
-                type="tel"
-                id="mobile"
-                class="form-input"
-                placeholder="আপনার মোবাইল নম্বর লিখুন"
-                pattern="[0-9]{11}"
-                maxlength="11"
-              />
+              <input type="tel" id="mobile" class="form-input" placeholder="Enter mobile number" pattern="[0-9]{11}"
+                maxlength="11" />
             </div>
           </div>
-
-          <div class="district-subdistrict flex items-center space-x-4 my-3">
-            <!-- District -->
-            <div class="district w-1/2">
-              <label for="district" class="form-label">District:</label>
+    
+          <!-- District and Subdistrict -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="district" class="form-label">District</label>
               <select id="district" class="form-select">
                 <option value="">Select District</option>
                 <option value="dhaka">Dhaka</option>
@@ -161,90 +254,100 @@
                 <option value="rajshahi">Rajshahi</option>
               </select>
             </div>
-
-            <!-- Sub-district (Thana) -->
-            <div class="subdistrict w-1/2">
-              <label for="subdistrict" class="form-label"
-                >Sub-district (Thana):</label
-              >
+            <div>
+              <label for="subdistrict" class="form-label">Subdistrict (Thana)</label>
               <select id="subdistrict" class="form-select">
-                <option value="">Select Sub-district</option>
+                <option value="">Select Subdistrict</option>
                 <option value="gulshan">Gulshan</option>
                 <option value="mirpur">Mirpur</option>
                 <option value="uttara">Uttara</option>
               </select>
             </div>
           </div>
-
-          <div class="price-type flex items-center space-x-4 mt-2">
-            <label class="form-label">দাম নির্বাচন করুন :</label>
-
-            <!-- Fixed -->
-            <label class="flex items-center">
-              <input
-                type="radio"
-                name="price_type"
-                value="fixed"
-                class="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-600"
-              />
-              <span class="ml-2 text-gray-700">ফিক্সড</span>
-            </label>
-
-            <!-- Negotiable -->
-            <label class="flex items-center">
-              <input
-                type="radio"
-                name="price_type"
-                value="negotiable"
-                class="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-600"
-              />
-              <span class="ml-2 text-gray-700">আলোচনাযোগ্য</span>
-            </label>
-          </div>
-
-          <div class="file-upload my-5">
-            <label for="media" class="form-label">Upload Photo or Video:</label>
-            <div
-              class="upload-box border-2 border-dashed border-gray-300 rounded-lg p-5 hover:border-yellow-400 transition duration-300"
-              id="uploadBox"
-            >
-              <label
-                for="media"
-                class="bg-yellow-500 text-white px-4 py-2 rounded cursor-pointer hover:bg-yellow-600 transition duration-300"
-              >
-                Browse Files
+    
+          <!-- Price Type -->
+          <div>
+            <label class="form-label">Price Type</label>
+            <div class="flex space-x-6">
+              <label class="flex items-center space-x-2">
+                <input type="radio" name="price_type" value="fixed" class="form-radio" />
+                <span>Fixed</span>
               </label>
-              <label for="" class="form-label pl-5"
-                >Drag & Drop your files here or</label
-              >
-              <input
-                type="file"
-                id="media"
-                class="hidden"
-                accept="image/*,video/*"
-                multiple
-              />
+              <label class="flex items-center space-x-2">
+                <input type="radio" name="price_type" value="negotiable" class="form-radio" />
+                <span>Negotiable</span>
+              </label>
             </div>
-            <small class="text-gray-500"
-              >Supported formats: JPG, PNG, MP4, AVI</small
-            >
           </div>
-
-          <div class="textariya my-3">
-            <label for="" class="form-label">Post distriction</label>
-            <textarea
-              name="description"
-              id="description"
-              placeholder="অনুগ্রহ করে আপনার বিবরণ লিখুন...!"
-              class="p-4 form-input focus:ring-yellow-100"
-            ></textarea>
+    
+          <!-- File Upload -->
+          <div>
+            <label for="media" class="form-label">Upload Photo or Video</label>
+            <div
+              class="upload-box border-2 border-dashed border-gray-300 rounded-md p-6 text-center cursor-pointer hover:border-yellow-400"
+              id="uploadBox">
+              <input type="file" id="media" class="hidden" accept="image/*,video/*" multiple />
+              <p class="text-gray-600">Drag & Drop files here or</p>
+              <button type="button" class="mt-3 px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600">
+                Browse Files
+              </button>
+            </div>
+            <small class="text-gray-500 block mt-2">
+              Supported formats: JPG, PNG, MP4, AVI
+            </small>
           </div>
-
-          <button class="btn btn_primary">Search</button>
+    
+          <!-- Post Description -->
+          <div>
+            <label for="description" class="form-label">Post Description</label>
+            <textarea id="description" name="description" class="form-textarea"
+              placeholder="Write your post description..."></textarea>
+          </div>
+    
+          <!-- Submit Button -->
+          <button type="submit"
+            class="w-full px-6 py-3 bg-blue-600 text-white text-lg rounded-md shadow-lg hover:bg-blue-700 transition duration-300">
+            Submit Post
+          </button>
         </form>
       </div>
     </section>
+<!--Bottom Menu Starts-->
+<section class="bottom_menu_main block md:hidden shadow-2xl mx-auto w-[100%]">
+  <div class="bottom_menu_inner">
+    <div class="bottom_menu_item_list">
+      <a href="index.html" class="bottom_menu_item">
+        <div>
+          <span><i class="fa-solid fa-house"></i></span>
+          <p>Home</p>
+        </div>
+      </a>
+      <div class="bottom_menu_item">
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <p>Search</p>
+      </div>
 
+      <a href="add_post.html">
+        <div class="bottom_menu_item special_button ">
+          <div class="circle">
+            <i class="fa-solid fa-circle-plus shadow-2xl"></i>
+          </div>
+          <p>Free Ad</p>
+
+        </div>
+      </a>
+      <div class="bottom_menu_item">
+        <span><i class="fa-solid fa-comments"></i></span>
+        <p>Chat</p>
+      </div>
+      <div class="bottom_menu_item">
+        <span><i class="fa-solid fa-user"></i></span>
+        <p>Account</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Bottom Menu Ends-->
     <!-- Footer Section -->
 
     <footer class="bg-gray-800 text-white pt-16 pb-5">
@@ -295,7 +398,6 @@
         </div>
       </div>
     </footer>
-
     <script src="assets/js/custome.js"></script>
   </body>
 </html>
