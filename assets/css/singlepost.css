@@ -1,0 +1,41 @@
+/* Styling for the Post Details Section */
+.image-gallery .main-image img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery .thumbnail-slider img {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.image-gallery .thumbnail-slider img:hover {
+    transform: scale(1.05);
+    border-color: #facc15;
+    /* Yellow border */
+}
+
+.sPost_Discription h3 {
+    font-size: 1.25rem;
+    color: #374151;
+    /* Gray-800 */
+}
+
+.specifications ul li {
+    padding-left: 1rem;
+    position: relative;
+}
+
+.specifications ul li::before {
+    content: '\2022';
+    color: #facc15;
+    /* Yellow */
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1rem;
+}
+
+.view i {
+    font-size: 1.25rem;
+    color: #facc15;
+}
