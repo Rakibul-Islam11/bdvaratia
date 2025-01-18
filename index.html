@@ -19,12 +19,24 @@
   <link rel="stylesheet" href="assets/css/bottomMenu.css">
   <link rel="stylesheet" href="tailwind/main.css">
   <style>
-
+.text-gradient {
+    background: linear-gradient(90deg, #fbbd23, #f97316, #ef4444);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
     .deemoo {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+    }
+    @media only screen and (max-width: 768px){
+          .deemoo {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+    }
     }
       .btn_primary {
     background-color: yellow !important;
@@ -188,18 +200,18 @@
 <!--Bottom Menu Ends-->
 
 
-    <div class="autoplay relative">
+    <div class="autoplay relative w-[100%] ">
       <div>
-        <img class="w-[100%] h-[100vh] object-cover" src="./assets/image/slide-images/slideimg1.jpg" alt="">
+        <img class="w-[100%]  h-[45vh] md:h-[100vh] object-cover" src="./assets/image/slide-images/slideimg1.jpg" alt="">
       </div>
       <div>
         <div>
-          <img class="w-[100%] h-[100vh] object-cover" src="./assets/image/slide-images/slideimg2.jpg" alt="">
+          <img class="w-[100%] h-[45vh] md:h-[100vh] object-cover" src="./assets/image/slide-images/slideimg2.jpg" alt="">
         </div>
       </div>
       <div>
         <div>
-          <img class="w-[100%] h-[100vh] object-cover" src="./assets/image/slide-images/slideimg3.jpg" alt="">
+          <img class="w-[100%] h-[45vh] md:h-[100vh] object-cover" src="./assets/image/slide-images/slideimg3.jpg" alt="">
         </div>
       </div>
     </div>
@@ -208,9 +220,11 @@
     <!-- Search Section -->
     <section class=" w-[100%] py-16 sm:py-32 lg:py-64 bg-cover bg-center absolute  deemoo  ">
       <div class="container max-w-7xl mx-auto text-center px-4">
-        <h1 class="text-[17px] sm:text-3xl md:text-3xl font-semibold text-white mb-2 md:mb-6">
-          আপনার প্রয়োজনীয় পণ্য বা সেবা খুঁজুন
+        <h1 class="text-gradient text-[17px] sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-wide mb-4 md:mb-8">
+          আপনার <span>প্রয়োজনীয় পণ্য</span>
+          বা <span>সেবা</span> খুঁজুন
         </h1>
+
 
         <!-- Location Button -->
         <div class="mb-0 md:mb-3 flex justify-center items-center">
@@ -266,13 +280,13 @@
       </div>
     </section>
 
-    <section class="advertiser-section py-2 bg-gray-100">
+    <!-- <section class="advertiser-section py-2 bg-gray-100">
       <div class="container mx-auto">
         <div class="flex justify-center items-center">
           <img src="assets/image/08-1170x7850.jpg" alt="Advertiser Banner" class="max-w-full h-auto" />
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-8 gap-2 p-2 max-w-screen-xl mx-auto">
       <!-- Category Card -->
